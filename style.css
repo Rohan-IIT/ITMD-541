@@ -29,7 +29,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 30px 10%;
+  padding: 20px 10%;
   /* background-color: #343a40; */
 }
 
@@ -156,9 +156,8 @@ button:hover {
 footer {
   padding: 1.5rem !important;
 }
-footer p{
-    font-family: "Ubuntu", sans-serif;
-
+footer p {
+  font-family: "Ubuntu", sans-serif;
 }
 
 .footer-hr {
