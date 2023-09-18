@@ -156,9 +156,8 @@ button:hover {
 footer {
   padding: 1.5rem !important;
 }
-footer p{
-    font-family: "Ubuntu", sans-serif;
-
+footer p {
+  font-family: "Ubuntu", sans-serif;
 }
 
 .footer-hr {
