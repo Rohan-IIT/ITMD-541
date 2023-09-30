@@ -26,7 +26,13 @@
 }
 
 #flex-section2 .item3 {
-
+	display: flex;
+	list-style-type: none;
+	text-align: center;
+	justify-content: space-evenly;
+	margin: unset;
+	padding: unset;
+  }
 }
 
 /* end Flexbox Part 2 */
