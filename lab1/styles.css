@@ -125,11 +125,14 @@
   color: #000;
   padding: 20px;
   text-decoration: none;
+  transition-property: background-color, color;
+  transition-duration: 3s;
 }
 
 #transition-section .box a:hover {
   background-color: #cc0000;
   color: #fff;
+  transition-duration: 0.5s;
 }
 
 /* end Transition Part */
