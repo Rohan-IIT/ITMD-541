@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <div class="container shadow-lg p-3 mb-5 bg-white rounded">
+      <h3>ITMD 541 - Lab 3 - Rohan Pawar</h3>
+
+      <h1>Tip Calculator</h1>
+      <hr class="my-4 px-5 mx-5" />
+      <form id="tipForm">
+        <div class="input-group">
+          <label for="billTotal">Bill Total:</label>
+          <input
+            class="rounded"
+            type="text"
+            id="billTotal"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            required
+          />
+        </div>
+        <p class="prompt-text" id="hidep">Please enter a valid number.</p>
+        <div class="input-group">
+          <label for="tipRange">Tip:</label>
+          <input type="range" id="tipRange" min="0" max="100" />
+        </div>
+        <div class="input-group">
+          <label for="tipPercentage">Tip Percentage:</label>
+          <input class="rounded" type="text" id="tipPercentage" disabled />
+        </div>
+        <div class="input-group">
+          <label for="tipAmount">Tip Amount:</label>
+          <input class="rounded" type="text" id="tipAmount" disabled />
+        </div>
+        <div class="input-group">
+          <label for="totalWithTip">Total Bill with Tip:</label>
+          <input class="rounded" type="text" id="totalWithTip" disabled />
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
