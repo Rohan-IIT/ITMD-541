@@ -50,12 +50,23 @@ a.waves-light {
   flex-wrap: wrap;
   gap: 10px;
 }
-
+.custom-w {
+  width: 50%;
+}
 
 /* Example @media query for smaller screens */
 @media screen and (max-width: 600px) {
   .imageCity {
     /* Adjust styles for smaller screens */
     flex-direction: column;
+  }
+
+  .imageCity img {
+    /* Display two images side by side */
+    width: calc(50% - 10px); /* Adjust the width and spacing as needed */
+  }
+  
+  .custom-w {
+    width: 100%;
   }
 }
