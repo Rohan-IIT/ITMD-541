@@ -162,7 +162,6 @@ function imagesCity() {
     if (cityName === '') {
         cityName = "Chicago"
     }
-    console.log(cityName);
     const API_key = "1ujYwpIHKGdagzt9zZeRAhTbrf7v1HvCC8BiIB8Qd4m2678zdz21MhPr";
 
     var xhr = new XMLHttpRequest();

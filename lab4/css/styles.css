@@ -63,9 +63,9 @@ a.waves-light {
 
   .imageCity img {
     /* Display two images side by side */
-    width: calc(50% - 10px); /* Adjust the width and spacing as needed */
+    width: 100% !important; /* Adjust the width and spacing as needed */
   }
-  
+
   .custom-w {
     width: 100%;
   }
