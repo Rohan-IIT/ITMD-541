@@ -1,0 +1,52 @@
+.hidden {
+  display: none;
+}
+
+.form-header {
+  padding: 1rem;
+  margin-top: -3.13rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.125rem;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+    0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.blue.accent-1 {
+  background-color: #82b1ff !important;
+}
+
+.btn-light-blue {
+  color: #fff;
+  background-color: #82b1ff !important;
+}
+
+.waves-effect {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a.waves-effect,
+a.waves-light {
+  display: inline-block;
+}
+.show-form {
+  display: inline;
+}
+.hide-form {
+  display: none;
+}
+
+.imageCity {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

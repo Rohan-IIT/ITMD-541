@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/mdb.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Sunrise Sunset Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="d-flex justify-content-center align-items-center"
+        style="height: 75vh"
+      >
+        <div class="card w-50">
+          <div class="card-body">
+            <!-- Header -->
+            <div class="form-header blue accent-1">
+              <h3 class="mt-2">
+                <i class="fas fa-sun mr-3"></i> Sunrise Sunset Dashboard
+              </h3>
+            </div>
+
+            <div class="text-center my-4">
+              <div class="hidden note note-danger m-2 p-2" id="errorDisplay">
+                <h4 id="errorText"></h4>
+              </div>
+
+              <div id="locationInput">
+                <div class="md-form form-md">
+                  <input
+                    class="form-control form-control-md"
+                    id="cityName"
+                    type="text"
+                    placeholder="Enter city name"
+                  />
+                </div>
+                <button
+                  class="btn btn-primary"
+                  onclick="getGeolocation(), imagesCity()"
+                >
+                  <i class="fas fa-search-location fa-lg mr-2"></i>
+                  Search by name
+                </button>
+                or
+                <button
+                  class="btn btn-secondary"
+                  onclick="getCurrentLocation(), imagesCity()"
+                >
+                  <i class="fas fa-location-arrow fa-lg mr-2"></i>
+                  Use Current Location
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container hidden" id="dashboard">
+      <div class="row my-3">
+        <div class="col-md text-center">
+          <p class="h4 text-center">
+            Here are today and tomorrow's sunrise and sunset times in
+            <span id="timeZoneToday"></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <p class="h3 text-center">Today</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="text-center">
+                    <p class="h3">Sunrise</p>
+                    <img
+                      src="./img/sunrise.png"
+                      class="img-fluid w-50"
+                      alt=""
+                    />
+                    <p><span id="sunriseToday"></span></p>
+                    <p class="text-muted">Dawn: <span id="dawnToday"></span></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="text-center">
+                    <p class="h3">Sunset</p>
+                    <img src="./img/sunset.png" class="img-fluid w-50" alt="" />
+                    <p><span id="sunsetToday"></span></p>
+                    <p class="text-muted">Dawn: <span id="duskToday"></span></p>
+                  </div>
+                </div>
+              </div>
+              <p class="text-center">
+                Today's Day Length: <span id="dayLengthToday"> and </span> and
+                Solar Noon:
+                <span id="solarNoonToday"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <p class="h3 text-center">Tomorrow</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="text-center">
+                    <p class="h3">Sunrise</p>
+                    <img
+                      src="./img/sunrise.png"
+                      class="img-fluid w-50"
+                      alt=""
+                    />
+                    <p><span id="sunriseTomorrow"></span></p>
+                    <p class="text-muted">
+                      Dawn: <span id="dawnTomorrow"></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="text-center">
+                    <p class="h3">Sunset</p>
+                    <img src="./img/sunset.png" class="img-fluid w-50" alt="" />
+                    <p><span id="sunsetTomorrow"></span></p>
+                    <p class="text-muted">
+                      Dawn: <span id="duskTomorrow"></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p class="text-center">
+                Tomorrow's Day Length:
+                <span id="dayLengthTomorrow"> and </span> and Solar Noon:
+                <span id="solarNoonTomorrow"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row my-5">
+        <div class="col-md text-center">
+          <p class="h4 text-center">
+            Sunrise and sunset photos of <span id="timeZoneTomorrow"></span>
+          </p>
+          <div id="photoContainer" class="imageCity"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn bg-dark">
+      <!--Call to action-->
+      <div class="pt-4">
+        <p class="text-white">
+          Example using the
+          <a
+            class="text-white"
+            href="https://sunrisesunset.io/api/"
+            target="_blank"
+          >
+            SunriseSunset.io API</a
+          >
+        </p>
+      </div>
+
+      <!--Copyright-->
+      <div class="footer-copyright py-3"> Design by Rohan Pawar, Student
+        @ 
+       Illinois Institute of technology
+      </div>
+      <!--/.Copyright-->
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
