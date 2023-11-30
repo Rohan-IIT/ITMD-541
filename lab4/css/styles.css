@@ -50,3 +50,12 @@ a.waves-light {
   flex-wrap: wrap;
   gap: 10px;
 }
+
+
+/* Example @media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .imageCity {
+    /* Adjust styles for smaller screens */
+    flex-direction: column;
+  }
+}
