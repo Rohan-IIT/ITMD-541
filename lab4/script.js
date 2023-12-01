@@ -25,7 +25,6 @@ function getSunriseSunsetData(latitude, longitude) {
             document.querySelector('#solarNoonToday').innerHTML = data.results.solar_noon
             document.querySelector('#timeZoneToday').innerHTML = data.results.timezone
 
-
             // Show the dashboard
             document.getElementById('dashboard').classList.remove('hidden');
             document.getElementById('errorDisplay').classList.add('hidden');
@@ -111,7 +110,7 @@ function getGeolocation() {
 
                 // Call the function to get sunrise/sunset data
                 getSunriseSunsetData(latitude, longitude);
-
+                addTextToParagraph(cityName)
                 // Reset the input field to be blank
                 cityNameInput.value = '';
             } else {
@@ -136,8 +135,10 @@ function getCurrentLocation() {
         navigator.geolocation.getCurrentPosition(position => {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
+            const cityName = "Chicago"
             // Call the function to get sunrise/sunset data
             getSunriseSunsetData(latitude, longitude);
+            addTextToParagraph(cityName)
         }, error => {
             console.error('Geolocation error:', error);
             // Handle geolocation errors and display a message to the user
@@ -204,3 +205,18 @@ function imagesCity() {
 
     xhr.send();
 }
+
+
+function addTextToParagraph(text) {
+    // Get the paragraph element by its ID
+    var myParagraph = document.getElementById("cityNameText");
+  
+    // Check if the paragraph element exists
+    if (myParagraph) {
+      // Add the provided text to the paragraph
+      myParagraph.innerHTML = text;
+    } else {
+      console.error("Element with ID 'myParagraph' not found");
+    }
+  }
+  
